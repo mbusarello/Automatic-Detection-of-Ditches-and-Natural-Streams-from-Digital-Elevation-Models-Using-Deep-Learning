@@ -1,2 +1,47 @@
 # Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning
 Public repository containing the code developed to prepare and analyse the data in the manuscript "Automatic Detection of Ditches and Natural Streams from Digital Elevation Models Using Deep Learning". The highest performing models for each dataset are also included, as well as sample data.
+
+![workflow](https://github.com/mbusarello/Deep-Learning-for-ditches-and-streams-detection-in-a-DEM/assets/72121679/e83f3276-1c33-435c-abb9-e4d46475e11a)
+
+Using topographic indices derived from the Swedish Aerial Laser Scanning data, we have trained models to detect ditches and stream channels. The topographic indices were evaluated alone and in combination.
+This repository has scripts to create labels, calculate topographic indices, train and evaluate the models, and apply them to detect the location of channels. The best ranking models are available, as well as all the possible combinations obtained.
+
+This is how the models performed, by Matthew's Correlation Coefficient:
+
+![single_mcc](https://github.com/mbusarello/Deep-Learning-for-ditches-and-streams-detection-in-a-DEM/assets/72121679/47346b84-9791-468f-a8b9-b01d3dc885a0)
+
+These are the predicted locations made by the models with the highest MCC:
+
+![combined_inferences3x2_times_24_v2](https://github.com/mbusarello/Deep-Learning-for-ditches-and-streams-detection-in-a-DEM/assets/72121679/072812ba-30fc-485d-822f-210ac4103d80)
+
+## Necessary data
+- Channel network as a polyline shapefile
+- Aerial Laser Scanning data
+
+## Creating the labels
+1. create_labels.py
+2. laser_to_DEM.py
+3. create_rasterlines-py
+4. separating_channels.py
+5. buffering_raster.py
+6. calculating_hpmf.py 
+7. lessthan_reclassification.py
+8. multiplying_rasters.py
+9. majority_filtering.py
+10. combining_rasters_finaloutput.py
+
+## Topographic indices
+- calculating_hillshade.py
+- calculating_slope.py
+- calculating_svf.py
+
+## Creating the input chips
+1. splitting_rasters.py
+2. selecting_labeled_chips_by_threshold.py
+3. selecting_ti_chips.py
+4. splitting_training_data.py
+
+## Semantic segmentation
+- train.py
+- evaluate.py
+- inference_unet.py
