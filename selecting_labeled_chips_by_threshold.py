@@ -12,17 +12,17 @@ import argparse
 def thresholding_chips(input_path,output_path,size):
     for chip in os.listdir(input_path):
         if chip.endswith('tif'):
-            chip_o = rio.open(os.path.join(input_path+chip))
+            chip_o = rio.open(os.path.join(input_path,chip))
             c_chip = chip_o.read(1)
             count = np.sum(np.isnan(c_chip))
             if count > int(0):
-                shutil.copyfile(os.path.join(input_path+chip),os.path.join(output_path+chip))
+                shutil.copyfile(os.path.join(input_path,chip),os.path.join(output_path,chip))
                 print('moving file',chip)
             else:
                 count2 = np.count_nonzero(c_chip)
                 if count2 >= int(size):
                     print('moving file',chip)
-                    shutil.copyfile(os.path.join(input_path+chip),os.path.join(output_path+chip))
+                    shutil.copyfile(os.path.join(input_path,chip),os.path.join(output_path,chip))
             chip_o.close()
     
 if __name__ == '__main__':   
