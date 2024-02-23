@@ -1,18 +1,20 @@
 # Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning
 Public repository containing the code developed to prepare and analyse the data in the manuscript "Automatic Detection of Ditches and Natural Streams from Digital Elevation Models Using Deep Learning". The highest performing models for each dataset are also included, as well as sample data.
 
-![workflow](https://github.com/mbusarello/Deep-Learning-for-ditches-and-streams-detection-in-a-DEM/assets/72121679/e83f3276-1c33-435c-abb9-e4d46475e11a)
+![workflow](https://github.com/mbusarello/Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning/assets/72121679/60d71954-85c2-42fb-a39d-c42c253828b8)
 
 Using topographic indices derived from the Swedish Aerial Laser Scanning data, we have trained models to detect ditches and stream channels. The topographic indices were evaluated alone and in combination.
-This repository has scripts to create labels, calculate topographic indices, train and evaluate the models, and apply them to detect the location of channels. The best ranking models are available, as well as all the possible combinations obtained.
+This repository has scripts to create labels, calculate topographic indices, train and evaluate the models, and apply them to detect the location of channels. The best ranking models are available.
 
 This is how the models performed, by Matthew's Correlation Coefficient:
 
-![single_mcc](https://github.com/mbusarello/Deep-Learning-for-ditches-and-streams-detection-in-a-DEM/assets/72121679/47346b84-9791-468f-a8b9-b01d3dc885a0)
+![image](https://github.com/mbusarello/Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning/assets/72121679/5129f3b0-a362-47bd-b74b-16201129580f)
+
 
 These are the predicted locations made by the models with the highest MCC:
 
-![combined_inferences3x2_times_24_v2](https://github.com/mbusarello/Deep-Learning-for-ditches-and-streams-detection-in-a-DEM/assets/72121679/072812ba-30fc-485d-822f-210ac4103d80)
+![combined_inferences3x2_times_24_v2](https://github.com/mbusarello/Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning/assets/72121679/46954d09-e9a5-40e9-84d1-4b402bbf811f)
+
 
 ## Necessary data
 - Channel network as a polyline shapefile
