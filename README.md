@@ -1,4 +1,4 @@
-# Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning
+# Automatic Detection of Ditches and Natural Streams from Digital Elevation Models Using Deep Learning
 Public repository containing the code developed to prepare and analyse the data in the manuscript "Automatic Detection of Ditches and Natural Streams from Digital Elevation Models Using Deep Learning". The highest performing models for each dataset are also included, as well as sample data.
 
 ![workflow](https://github.com/mbusarello/Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning/assets/72121679/60d71954-85c2-42fb-a39d-c42c253828b8)
