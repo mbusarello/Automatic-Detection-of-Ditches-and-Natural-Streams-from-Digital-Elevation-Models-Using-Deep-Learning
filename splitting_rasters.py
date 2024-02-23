@@ -29,7 +29,7 @@ def splitting_raster(input_path, output_path):
         for chip in sorted(os.listdir(os.path.join(output_path,raster))):
             if chip.endswith('.tif'):
                 print(chip)
-                os.rename(os.path.join(output_path,raster,chip),os.path.join(output_path,raster,'_',chip))
+                os.rename(os.path.join(output_path,raster,chip),os.path.join(output_path,raster+'_'+chip))
         os.rmdir(os.path.join(output_path,raster))
     
 if __name__ == '__main__':   
