@@ -29,6 +29,9 @@ These are the predicted locations made by the models with the highest MCC:
 8. multiplying_rasters.py
 9. majority_filtering.py
 10. combining_rasters_finaloutput.py
+11. dataset_channels_labels.py
+12. dataset_ditches_labels.py
+13. dataset_streams_labels.py
 
 ## Topographic indices
 - calculating_hillshade.py
