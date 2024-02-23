@@ -14,7 +14,7 @@ def selecting_chips(label_path,ti_path):
         if chip in unique:
             pass
         else:
-            os.remove(os.path.join(ti_path+chip))
+            os.remove(os.path.join(ti_path,chip))
                     
             
 if __name__ == '__main__':   
