@@ -1,6 +1,7 @@
 # Automatic Detection of Ditches and Natural Streams from Digital Elevation Models Using Deep Learning
 
-![image](https://github.com/mbusarello/Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning/assets/72121679/7a617366-ae22-4116-9387-67382fea2822)
+![image](https://github.com/mbusarello/Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning/assets/72121679/569e5f2c-363b-4b3a-91b7-2705b8019848)
+
 
 Using topographic indices derived from the Swedish Aerial Laser Scanning data, we have trained models to detect ditches and stream channels. The topographic indices were evaluated alone and in combination.
 This repository has scripts to create labels, calculate topographic indices, train and evaluate the models, and apply them to detect the location of channels. The best ranking models are available.
