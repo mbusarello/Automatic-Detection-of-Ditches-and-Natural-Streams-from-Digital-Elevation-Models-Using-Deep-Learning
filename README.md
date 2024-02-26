@@ -20,7 +20,7 @@ This repository has scripts to create labels, calculate topographic indices, tra
 - Channel network as a polyline shapefile
 - Aerial Laser Scanning data
 
-The data for this study comes from 12 study areas spread across Sweden, with different characteristics regarding land use, forest cover, among others.
+The data for this study comes from 12 study areas spread across Sweden, with different characteristics regarding land use, forest cover, among others. The laser data comes from [Lantmäteriet](https://www.lantmateriet.se/globalassets/geodata/geodataprodukter/hojddata/pb_laserdata_nedladdning_skog.pdf).
 ![study_sites_mn1_bigger](https://github.com/mbusarello/Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning/assets/72121679/5f09ad14-17ca-40bc-8a39-a784dacfef49)
 
 The data is originally organized into tiles of 2500 km x 2500 km, and for this work it is further splited into chips of 250 m x 250 m.
