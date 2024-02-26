@@ -5,7 +5,8 @@
 Using topographic indices derived from the Swedish Aerial Laser Scanning data, we have trained models to detect ditches and stream channels. The topographic indices were evaluated alone and in combination.
 This repository has scripts to create labels, calculate topographic indices, train and evaluate the models, and apply them to detect the location of channels. The best ranking models are available.
 
-This is how the models performed according to their Matthew's Correlation Coefficient (MCC):
+>[!NOTE]
+>This is how the models performed according to their Matthew's Correlation Coefficient (MCC):
 
 ![image](https://github.com/mbusarello/Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning/assets/72121679/5129f3b0-a362-47bd-b74b-16201129580f)
 
@@ -13,13 +14,12 @@ These are examples of the predictions made by the models with the highest MCC:
 
 ![combined_inferences3x2_times_24_v2](https://github.com/mbusarello/Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning/assets/72121679/46954d09-e9a5-40e9-84d1-4b402bbf811f)
 
->[!IMPORTANT]
->## Data
+
+## Data
 - Channel network as a polyline shapefile
 - Aerial Laser Scanning data
 
 The data for this study comes from 12 study areas spread across Sweden, with different characteristics regarding land use, forest cover, among others.
-
 ![study_sites_mn1_bigger](https://github.com/mbusarello/Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning/assets/72121679/5f09ad14-17ca-40bc-8a39-a784dacfef49)
 
 The data is originally organized into tiles of 2500 km x 2500 km, and for this work it is further splited into chips of 250 m x 250 m.
