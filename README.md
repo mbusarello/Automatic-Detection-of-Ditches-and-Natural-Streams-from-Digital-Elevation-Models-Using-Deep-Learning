@@ -32,37 +32,37 @@ The data is originally organized into tiles of 2500 km x 2500 km, and for this w
 
 Creates the digital elevation model from the aerial laser data.
 
-> 2. create_rasterlines-py
+- [ ] 2. create_rasterlines-py
 Turns the polyline channels from the shapefiles into lines in raster data. The raster pixels can be 0 (background), 1 (ditches), or 2 (streams).
 
-> 3. separating_channels.py
+- [ ] 3. separating_channels.py
 Splits the raster data between channel type, creating a copy with only ditches and another with only streams.
   
-4. buffering_raster.py
+- [ ] 4. buffering_raster.py
   Creates a buffer of 1.5 m around each channel in the raster data, to *****simulate the mean channel width of 3 m.
 
-5. calculating_hpmf.py 
+- [ ] 5. calculating_hpmf.py 
   Calculates the High-Pass Median Filter from the digital elevation model.
 
-6. lessthan_reclassification.py
+- [ ] 6. lessthan_reclassification.py
   Reclassifies the HPMF values based on the threshold of -0.075, with 0 for values above it, and 1 for those below it.
 
-7. multiplying_rasters.py
+- [ ] 7. multiplying_rasters.py
   Multiplies the reclassified rasters and the buffered ones, and outputs the pixels that are within the buffer zone.
 
-8. majority_filtering.py
+- [ ] 8. majority_filtering.py
   Smooths the multiplied output.
 
-9. combining_rasters_finaloutput.py
+- [ ] 9. combining_rasters_finaloutput.py
   Combines the rasters with the ditch and stream pixels into a single one.
 
-10. dataset_channels_labels.py
+- [ ] 10. dataset_channels_labels.py
   Creates the dataset Channels.
 
-11. dataset_ditches_labels.py
+- [ ] 11. dataset_ditches_labels.py
   Creates the dataset Ditches.
 
-12. dataset_streams_labels.py
+- [ ] 12. dataset_streams_labels.py
   Creates the dataset Streams.
 
 
