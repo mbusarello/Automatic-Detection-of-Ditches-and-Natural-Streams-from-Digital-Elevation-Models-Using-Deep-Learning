@@ -32,7 +32,7 @@ def multiplying(buffered_path,reclass_path,output_path):
                 print('files do not match, trying the next one')
                 
 if __name__ == '__main__':   
-    parser = argparse.ArgumentParser(description='multiplies the latvian raster by the buffered raster separated between ditches and streams',
+    parser = argparse.ArgumentParser(description='multiplies the reclassified raster by the buffered raster separated between ditches and streams',
                                      add_help=True,formatter_class=argparse.HelpFormatter)
     parser.add_argument('buffered_path',help='path to the buffered rasters separated between ditches and streams')
     parser.add_argument('reclass_path', help='path to the reclassified rasters')
