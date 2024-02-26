@@ -28,7 +28,7 @@ The data is originally organized into tiles of 2500 km x 2500 km, and for this w
 
 
 ## Creating the labels
-> 1. laser_to_DEM.py
+[ ] 1. laser_to_DEM.py
 
 Creates the digital elevation model from the aerial laser data.
 
