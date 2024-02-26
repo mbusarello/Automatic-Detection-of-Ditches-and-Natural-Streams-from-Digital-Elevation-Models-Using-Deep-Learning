@@ -28,13 +28,13 @@ The data is originally organized into tiles of 2500 km x 2500 km, and for this w
 
 
 ## Creating the labels
-1. laser_to_DEM.py
+> 1. laser_to_DEM.py
   Creates the digital elevation model from the aerial laser data.
 
-2. create_rasterlines-py
+> 2. create_rasterlines-py
   Turns the polyline channels from the shapefiles into lines in raster data. The raster pixels can be 0 (background), 1 (ditches), or 2 (streams).
 
-3. separating_channels.py
+> 3. separating_channels.py
   Splits the raster data between channel type, creating a copy with only ditches and another with only streams.
   
 4. buffering_raster.py
@@ -44,30 +44,51 @@ The data is originally organized into tiles of 2500 km x 2500 km, and for this w
   Calculates the High-Pass Median Filter from the digital elevation model.
 
 6. lessthan_reclassification.py
-  
+  Reclassifies the HPMF values based on the threshold of -0.075, with 0 for values above it, and 1 for those below it.
 
-8. multiplying_rasters.py
+7. multiplying_rasters.py
+  Multiplies the reclassified rasters and the buffered ones, and outputs the pixels that are within the buffer zone.
 
-9. majority_filtering.py
+8. majority_filtering.py
+  Smooths the multiplied output.
 
-10. combining_rasters_finaloutput.py
+9. combining_rasters_finaloutput.py
+  Combines the rasters with the ditch and stream pixels into a single one.
 
-11. dataset_channels_labels.py
+10. dataset_channels_labels.py
+  Creates the dataset Channels.
 
-12. dataset_ditches_labels.py
+11. dataset_ditches_labels.py
+  Creates the dataset Ditches.
 
-13. dataset_streams_labels.py
+12. dataset_streams_labels.py
+  Creates the dataset Streams.
+
 
 ## Topographic indices
 - calculating_hillshade.py
+  Calculates the hillshade from the digital elevation model.
+  
 - calculating_slope.py
+  Calculates the slope from the digital elevation model.
+  
 - calculating_svf.py
+  Calculates the Sky-view Factor
+  
 
 ## Creating the input chips
 1. splitting_rasters.py
+  Splits the tiles into chips to be used as training data.
+
 2. selecting_labeled_chips_by_threshold.py
+  Selects the dataset chips that are over the established threshold.
+
 3. selecting_ti_chips.py
+  Selects the chips of topographic indices based on the previously selected dataset chips.
+
 4. splitting_training_data.py
+  Splits the dataset and topographic indices chips between training (80%) and testing (20%).
+
 
 ## Semantic segmentation
 - train.py
