@@ -23,7 +23,7 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser(
-                       description='Convert vector observaions to binary raster labels',
+                       description='Convert the vector observations into binary raster labels',
                        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('base_file_path', help='Path to input files to use as basefile')
     parser.add_argument('input_observations', help = 'shapefile with observations to convert to labels')
