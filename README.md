@@ -80,27 +80,34 @@ Creates the dataset Streams.
 
 ## Topographic indices
 - calculating_hillshade.py
-  Calculates the hillshade from the digital elevation model.
+
+Calculates the hillshade from the digital elevation model.
   
 - calculating_slope.py
-  Calculates the slope from the digital elevation model.
+
+Calculates the slope from the digital elevation model.
   
 - calculating_svf.py
-  Calculates the Sky-view Factor
+
+Calculates the Sky-view Factor
   
 
 ## Creating the input chips
 1. splitting_rasters.py
-  Splits the tiles into chips to be used as training data.
+
+Splits the tiles into chips to be used as training data.
 
 2. selecting_labeled_chips_by_threshold.py
-  Selects the dataset chips that are over the established threshold.
+
+Selects the dataset chips that are over the established threshold.
 
 3. selecting_ti_chips.py
-  Selects the chips of topographic indices based on the previously selected dataset chips.
+
+Selects the chips of topographic indices based on the previously selected dataset chips.
 
 4. splitting_training_data.py
-  Splits the dataset and topographic indices chips between training (80%) and testing (20%).
+
+Splits the dataset and topographic indices chips between training (80%) and testing (20%).
 
 
 ## Semantic segmentation
