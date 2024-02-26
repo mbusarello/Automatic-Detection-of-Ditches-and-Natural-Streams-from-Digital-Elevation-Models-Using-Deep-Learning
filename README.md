@@ -29,13 +29,13 @@ The data is originally organized into tiles of 2500 km x 2500 km, and for this w
 
 ## Creating the labels
 > 1. laser_to_DEM.py
-  Creates the digital elevation model from the aerial laser data.
+Creates the digital elevation model from the aerial laser data.
 
 > 2. create_rasterlines-py
-  Turns the polyline channels from the shapefiles into lines in raster data. The raster pixels can be 0 (background), 1 (ditches), or 2 (streams).
+Turns the polyline channels from the shapefiles into lines in raster data. The raster pixels can be 0 (background), 1 (ditches), or 2 (streams).
 
 > 3. separating_channels.py
-  Splits the raster data between channel type, creating a copy with only ditches and another with only streams.
+Splits the raster data between channel type, creating a copy with only ditches and another with only streams.
   
 4. buffering_raster.py
   Creates a buffer of 1.5 m around each channel in the raster data, to *****simulate the mean channel width of 3 m.
