@@ -10,7 +10,8 @@ This repository has scripts to create labels, calculate topographic indices, tra
 
 ![image](https://github.com/mbusarello/Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning/assets/72121679/5129f3b0-a362-47bd-b74b-16201129580f)
 
-These are examples of the predictions made by the models with the highest MCC:
+>[!NOTE]
+>These are examples of the predictions made by the models with the highest MCC:
 
 ![combined_inferences3x2_times_24_v2](https://github.com/mbusarello/Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning/assets/72121679/46954d09-e9a5-40e9-84d1-4b402bbf811f)
 
