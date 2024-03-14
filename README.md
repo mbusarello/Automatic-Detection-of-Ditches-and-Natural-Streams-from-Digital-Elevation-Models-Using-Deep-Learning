@@ -26,6 +26,7 @@ This repository has scripts to create labels, calculate topographic indices, tra
 - Aerial Laser Scanning data
 
 The data for this study comes from 12 study areas spread across Sweden, with different characteristics regarding land use and forest cover, among others. The laser data comes from [Lantmäteriet](https://www.lantmateriet.se/globalassets/geodata/geodataprodukter/hojddata/pb_laserdata_nedladdning_skog.pdf), and it was used to create the digital elevation models from which the topographic indices were calculated.
+
 ![image](https://github.com/mbusarello/Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning/assets/72121679/88c909a9-84ee-41a7-bf1f-9641c15c5d76)
 
 The data is originally organized into tiles of 2500 m x 2500 m, later being split into chips of 250 m x 250 m.
