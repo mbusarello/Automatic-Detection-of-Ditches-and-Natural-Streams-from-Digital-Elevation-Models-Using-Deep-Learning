@@ -3,8 +3,8 @@
 ![image](https://github.com/mbusarello/Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning/assets/72121679/569e5f2c-363b-4b3a-91b7-2705b8019848)
 
 
-Using topographic indices derived from the Swedish Aerial Laser Scanning data, we have trained models to detect ditches and stream channels. The topographic indices were evaluated alone and in combination.
-This repository has scripts to create labels, calculate topographic indices, train and evaluate the models, and apply them to detect the location of channels. The best ranking models are available.
+Using topographic indices derived from the Swedish Aerial Laser Scanning data, we have trained deep learning models to detect ditches and stream channels. The chosen architecture was UNet. The topographic indices were used individually and in combination.
+This repository has scripts to create labels, calculate topographic indices, train and evaluate the models, and apply them to detect the location of channels (inference). It also contains the highest ranking models for the 0.5 m resolution.
 
 >[!NOTE]
 >This is how the models performed according to their Matthew's Correlation Coefficient (MCC):
@@ -12,20 +12,23 @@ This repository has scripts to create labels, calculate topographic indices, tra
 ![image](https://github.com/mbusarello/Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning/assets/72121679/5129f3b0-a362-47bd-b74b-16201129580f)
 
 >[!NOTE]
->These are examples of the predictions made by the models with the highest MCC:
+>These are examples of inference from the models with the highest MCC:
 
 ![image](https://github.com/mbusarello/Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning/assets/72121679/e3c3ea6d-3372-4a02-a83b-1a9a8dded913)
 
+>[!NOTE]
+>Different datasets were used to train the models and analyze the impact of different labeling methods. The dataset Channels combines ditches and streams under the same label. Dataset Ditches only has the pixels corresponding to ditches. Dataset Streams only contains the pixels that correspond to the stream channels. Dataset Streams&Ditches has ditches and streams labeled separately. All of them can be created using the code present in this repository.
 
+![Figure3](https://github.com/mbusarello/Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning/assets/72121679/adf8f12d-04d3-4089-889c-faae8b3a4cf2)
 
 ## Data
 - Channel network as a polyline shapefile
 - Aerial Laser Scanning data
 
-The data for this study comes from 12 study areas spread across Sweden, with different characteristics regarding land use, forest cover, among others. The laser data comes from [Lantmäteriet](https://www.lantmateriet.se/globalassets/geodata/geodataprodukter/hojddata/pb_laserdata_nedladdning_skog.pdf), and from it the digital elevation models are created.
+The data for this study comes from 12 study areas spread across Sweden, with different characteristics regarding land use and forest cover, among others. The laser data comes from [Lantmäteriet](https://www.lantmateriet.se/globalassets/geodata/geodataprodukter/hojddata/pb_laserdata_nedladdning_skog.pdf), and it was used to create the digital elevation models from which the topographic indices were calculated.
 ![image](https://github.com/mbusarello/Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning/assets/72121679/88c909a9-84ee-41a7-bf1f-9641c15c5d76)
 
-The data is originally organized into tiles of 2500 m x 2500 m, and for this work it is further splited into chips of 250 m x 250 m.
+The data is originally organized into tiles of 2500 m x 2500 m, later being split into chips of 250 m x 250 m.
 
 ![tiles_chips](https://github.com/mbusarello/Automatic-Detection-of-Ditches-and-Natural-Streams-from-Digital-Elevation-Models-Using-Deep-Learning/assets/72121679/ee10caf4-b2b8-4e70-afda-b69dc3ed1a4e)
 
@@ -41,7 +44,7 @@ Turns the polyline channels from the shapefiles into lines in raster data. The r
 
 3. separating_channels.py
 
-Splits the raster data between channel type, creating a copy with only ditches and another with only streams.
+Splits the raster data between channel type, creating a copy with only ditches and one with only streams.
   
 4. buffering_raster.py
 
@@ -65,7 +68,7 @@ Smooths the multiplied output.
 
 9. combining_rasters_finaloutput.py
 
-Combines the rasters with the ditch and stream pixels into a single one.
+Combines the rasters with the separated ditches and streams into a single one.
 
 10. dataset_channels_labels.py
 
