@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jun 22 09:49:59 2022
-
-@author: mabu0008
+@author: Mariana Busarello, 2024
 """
 
 import os
