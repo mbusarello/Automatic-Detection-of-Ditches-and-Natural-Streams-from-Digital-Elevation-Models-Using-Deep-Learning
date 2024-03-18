@@ -13,7 +13,9 @@ def train_and_test(training_path,testing_path):
     cc = []
 
     for folders in sorted(os.listdir(training_path)):
-        if os.path.isdir(folders):
+        print(folders)
+        if os.path.isdir(os.join(training_path,folders)):
+            print(os.join(training_path,folders))
             os.mkdir(os.path.join(testing_path,folders))
     
     for chips in os.listdir(os.path.join(training_path,os.listdir(training_path)[0])):
@@ -26,7 +28,7 @@ def train_and_test(training_path,testing_path):
     for tis in os.listdir(training_path):
         tipath = os.path.join(training_path,tis)
         for test_chips in testList:
-            os.rename(os.path.join(tipath,test_chips),os.path.join(training_path.replace(testing_path),test_chips))
+            os.rename(os.path.join(tipath,test_chips),os.path.join(tipath.replace(training_path,testing_path),test_chips))
 
 if __name__ == '__main__':   
     parser = argparse.ArgumentParser(description='separates the input data between testing (20%) and training (80%), moving the testing data to a different folder',
