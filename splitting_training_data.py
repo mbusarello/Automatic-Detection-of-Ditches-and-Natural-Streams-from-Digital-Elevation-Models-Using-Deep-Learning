@@ -13,7 +13,7 @@ def train_and_test(training_path,testing_path):
     cc = []
 
     for folders in sorted(os.listdir(training_path)):
-        if os.path.isdir(os.join(training_path,folders)):
+        if os.path.isdir(os.path.join(training_path,folders)):
             os.mkdir(os.path.join(testing_path,folders))
     
     for chips in os.listdir(os.path.join(training_path,os.listdir(training_path)[0])):
