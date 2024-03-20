@@ -14,7 +14,10 @@ def train_and_test(training_path,testing_path):
 
     for folders in sorted(os.listdir(training_path)):
         if os.path.isdir(os.path.join(training_path,folders)):
-            os.mkdir(os.path.join(testing_path,folders))
+            try:
+                os.mkdir(os.path.join(testing_path,folders))
+            except Exception as e:
+                print(e)
     
     for chips in os.listdir(os.path.join(training_path,os.listdir(training_path)[0])):
         if chips.endswith('.tif'):
