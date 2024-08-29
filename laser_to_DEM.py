@@ -14,25 +14,23 @@ except:
     from WBT.whitebox_tools import WhiteboxTools
     whitebox.download_wbt(linux_musl=True, reset=True)
 
-def lasering(input_path,output_path):  
+def lasering(input_path):  
     
     for laz in os.listdir(input_path):
-        if laz.endswith('laz'):
-            wbt.lidar_tin_gridding(
-                i=os.path.join(input_path,laz),
-                output=output_path+laz.replace('laz','tif'), 
-                parameter="elevation", 
-                returns="all", 
-                resolution=1.0, 
-                exclude_cls="0,1,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18", 
-                minz=None, 
-                maxz=None
-                                    )
+        wbt.set_working_dir(input_path)
+        wbt.lidar_tin_gridding(
+            parameter="elevation", 
+            returns="last", 
+            resolution=0.5, 
+            exclude_cls="0,1,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18",
+            max_triangle_edge_length = 50,
+            minz=None, 
+            maxz=None
+                                )
             
 if __name__ == '__main__':   
-    parser = argparse.ArgumentParser(description='buffers the streams and ditches rasters',
+    parser = argparse.ArgumentParser(description='creates the Digital Elevation Models from the LiDAR data',
                                      add_help=True,formatter_class=argparse.HelpFormatter)
     parser.add_argument('input_path',help='path to the laser data')
-    parser.add_argument('output_path', help='destination path for the generated DEMs')
     args = vars(parser.parse_args())
     lasering(**args)
